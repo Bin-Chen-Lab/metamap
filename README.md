@@ -17,11 +17,9 @@ c.	./bin/metamap12
 
 Call MetaMap and process the output. 
 1)	python call_metamap.py input_file, output_file, tempt_file, meta_map path
-e.g., python call_metamap.py ttd_dz.txt ttd_dz_out.txt test /Users/User/Downloads/public_mm/bin/metamap12
-
-
-
-
+```sh
+python call_metamap.py ttd_dz.txt ttd_dz_out.txt test /Users/User/Downloads/public_mm/bin/metamap12
+```
 
 
 
