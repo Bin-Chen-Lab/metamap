@@ -4,7 +4,6 @@
 import csv
 import os
 import sys
-from sets import Set
 
 def removeNonAscii(s): return "".join(filter(lambda x: ord(x)<128, s))
 
@@ -50,10 +49,10 @@ def process_metamap(input_file, output_file):
                         concept_name = (line[line.find(" "):].split(":")[1]).strip()
                         candidate_dzs.append(str(score) + "\t" + concept_id + "\t" + concept_name + "\t" + type)
             except IOError:
-               print 'no file found for ' + str(count)
+               print('no file found for ' + str(count))
                
             #remove the redunct
-            candidate_dzs = Set(candidate_dzs)
+            candidate_dzs = set(candidate_dzs)
 
             for candidate_dz in candidate_dzs:
                 extract_pairs.write( record.strip() + "\t" + candidate_dz + "\n")
